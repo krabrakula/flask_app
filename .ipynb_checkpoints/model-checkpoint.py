@@ -5,7 +5,7 @@ import pandas as pd
 import pickle
 from sklearn.linear_model import LinearRegression
 
-dataset = pd.read_csv('insurance_.csv')
+dataset = pd.read_csv('InsuranceCost.csv')
 
 x = dataset.drop('charges', axis=1)
 y = dataset.charges
