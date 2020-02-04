@@ -13,15 +13,32 @@
 </head>
 
 <body>
- <div class="login">
-	<h1>Predict Salary Analysis</h1>
+ <div>
+	<h1>Predict Insurance Charge Analysis</h1>
 
-     <!-- Main Input For Receiving Query to our ML -->
+     <!-- Main Input For Receiving Query to our ML 
+age 	sex 	bmi 	children 	smoker 	region 	charges-->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="experience" placeholder="Experience" required="required" />
-        <input type="text" name="test_score" placeholder="Test Score" required="required" />
-		<input type="text" name="interview_score" placeholder="Interview Score" required="required" />
-
+    	
+        <input type="text" name="age" placeholder="age" required="required" />
+        
+        <select type="text" name="sex" placeholder="sex" required="required">
+            <option disabled>Sex</option>
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+           </select>
+        
+        <input type="text" name="bmi" placeholder="bmi" required="required" />
+        
+        <input type="text" name="children" placeholder="children" required="required" />
+        
+        <select type="text" name="smoker" placeholder="smoker">
+            <option disabled>Is smoker?</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+           </select>
+        
+        
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
